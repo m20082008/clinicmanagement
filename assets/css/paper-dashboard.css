@@ -2767,7 +2767,16 @@ textarea.form-control {
 .alert.alert-success.fade.in {
   text-align: right;
 }
-a,html,p,h1,h2,h3{
+p,h1,h2,h3{
   font-family: Vazir
 ;
+}
+strong {
+  font-family: vazir;
+}
+a.navbar-brand {
+  font-family: vazir;
+}
+td, tr, th {
+  font-family: vazir;
 }

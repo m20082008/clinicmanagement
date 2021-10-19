@@ -35,6 +35,7 @@ include('inc/header.php');
                             <th>نام کاربری</th>
                             <th>پسورد</th>
                             <th>ایمیل</th>
+                            <th>فعال/غیر فعال</th>
                             <th></th>
                             <th></th>
                             <th></th>
