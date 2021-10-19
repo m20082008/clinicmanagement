@@ -2766,3 +2766,7 @@ textarea.form-control {
 .alert.alert-success.fade.in {
   text-align: right;
 }
+a,html,p,h1,h2,h3{
+  font-family: Vazir
+;
+}

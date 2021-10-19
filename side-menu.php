@@ -3,7 +3,7 @@
     <div class="sidebar-wrapper" id="sideLinks">
             <div class="logo">
                 <a href="index.php" class="simple-text">
-                    School Management
+                    مدریت کلینیک
                 </a>
             </div>
             <ul class="nav">
@@ -69,7 +69,7 @@
 					<span class="icon-bar bar2"></span>
 					<span class="icon-bar bar3"></span>
 				</button>
-				<a class="navbar-brand" href="#">School Management System</a>
+				<a class="navbar-brand" href="#">سیستم یکپارچه مدیریت کلینیک مکتب</a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -77,16 +77,12 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="ti-user"></i>
 						<p class="notification"></p>
-						<p><strong><?php echo $_SESSION["admin"]; ?></strong></p>
-						<b class="caret"></b>
+						<p><strong><?php echo $_SESSION["admin"]."خوش آمدید"; ?></strong></p>
+						<b class="caret"></b>   
 						</a>
 						<ul class="dropdown-menu">
-						<li><a href="profile.php"><i class="fa fa-user"></i> <strong>Profile</strong> </a></li>
 						<li>
-						<a href="settings.php"><i class="fa fa-cog"></i> <strong>Settings</strong></a>
-						</li>
-						<li>
-						<a href="logout.php"><i class="fa fa-power-off"></i> <strong>Logout</strong></a>
+						<a href="logout.php"><i class="fa fa-power-off"></i> <strong>خروج</strong></a>
 						</li>
 						</ul>
 					</li>

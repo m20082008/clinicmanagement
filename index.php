@@ -11,7 +11,6 @@ include('inc/header.php');
 <title>سیستم مدیریت کلینیک </title>
 <?php include('include_files.php'); ?>
 <?php include('inc/container.php'); ?>
-
 <div class="container">
     <div class="row d-flex">
         <div class="col-md-6 d-flex justify-content-center">
