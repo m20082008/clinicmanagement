@@ -12,7 +12,6 @@ include('inc/header.php');
     <script src="js/students.js"></script>
 <?php include('inc/container.php');?>
     <div class="container">
-        <div>salam</div>
         <?php include('side-menu.php');	?>
         <div class="content">
             <div class="container-fluid">
