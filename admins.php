@@ -33,9 +33,8 @@ include('inc/header.php');
                         <tr>
                             <th>ID</th>
                             <th>نام کاربری</th>
-                            <th>پسورد</th>
                             <th>ایمیل</th>
-                            <th>فعال/غیر فعال</th>
+                            <th>وضعیت</th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -72,8 +71,8 @@ include('inc/header.php');
                     <div class="modal-footer">
                         <input type="hidden" name="adminid" id="adminid" />
                         <input type="hidden" name="action" id="action" value="updateadmin" />
-                        <input type="submit" name="save" id="save" class="btn btn-info" value="Save" />
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <input type="submit" name="save" id="save" class="btn btn-info" value="ذخیره" />
+                        <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
                     </div>
                 </div>
             </form>

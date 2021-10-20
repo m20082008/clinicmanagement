@@ -2789,3 +2789,13 @@ h4.modal-title {
 .form-control {
   text-align: right;
 }
+h4.modal-title {
+  font-family: vazir;
+}
+
+.stats {
+  font-family: vazir;
+}
+a {
+  font-family: vazir;
+}
