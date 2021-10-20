@@ -19,6 +19,12 @@
                         <p>مدیریت ادمین ها</p>
                     </a>
                 </li>
+                <li class="" id="adminPage">
+                    <a href="admins.php" class="menu-link">
+                        <i class="ti-dashboard"></i>
+                        <p>مدیریت درمانگاه</p>
+                    </a>
+                </li>
 
             </ul>
     	</div>
