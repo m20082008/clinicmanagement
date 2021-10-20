@@ -4,7 +4,7 @@ require('config.php');
 
 class Clinic extends Dbconfig
 {
-    private $clinicTable = 'clinics';
+    private $table = 'clinics';
     private $dbConnect = false;
 
     public function __construct()
@@ -26,7 +26,7 @@ class Clinic extends Dbconfig
         if (!empty($_POST["login"]) && $_POST["username"] != '' && $_POST["password"] != '') {
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $sqlQuery = "SELECT * FROM " . $this->adminTable . " 
+            $sqlQuery = "SELECT * FROM " . $this->table . " 
 				WHERE username='" . $username . "' AND password='" . md5($password) . "' AND is_active = 1";
             $resultSet = mysqli_query($this->dbConnect, $sqlQuery) or die("error" . mysql_error());
             $isValidLogin = mysqli_num_rows($resultSet);
@@ -54,7 +54,7 @@ class Clinic extends Dbconfig
     public function listAdmins()
     {
         $sqlQuery = "SELECT s.id, s.username, s.email, s.is_active 
-			FROM " . $this->adminTable . " as s ";
+			FROM " . $this->table . " as s ";
         if (!empty($_POST["order"])) {
             $sqlQuery .= 'ORDER BY ' . $_POST['order']['0']['column'] . ' ' . $_POST['order']['0']['dir'] . ' ';
         } else {
@@ -98,7 +98,7 @@ class Clinic extends Dbconfig
     public function addAdmin()
     {
         if ($_POST["username"] != "" && $_POST["password"] != "") {
-            $insertQuery = "INSERT INTO " . $this->adminTable . "(username,password,email) 
+            $insertQuery = "INSERT INTO " . $this->table . "(username,password,email) 
 				VALUES ('" . $_POST["username"] . "',md5('" . $_POST["password"] . "'),'" . $_POST["email"] . "') ";
             $userSaved = mysqli_query($this->dbConnect, $insertQuery);
         }
@@ -107,7 +107,7 @@ class Clinic extends Dbconfig
     public function getAdminDetails()
     {
         $sqlQuery = "SELECT s.id, s.username, s.email, s.is_active 
-			FROM " . $this->adminTable . " as s ";
+			FROM " . $this->table . " as s ";
         $sqlQuery .= "WHERE s.id = '" . $_POST["adminid"] . "' ";
         $result = mysqli_query($this->dbConnect, $sqlQuery);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -117,7 +117,7 @@ class Clinic extends Dbconfig
     public function updateAdmin()
     {
         if ($_POST['adminid']) {
-            $updateQuery = "UPDATE " . $this->adminTable . " 
+            $updateQuery = "UPDATE " . $this->table . " 
 			SET username = '" . $_POST["username"] . "', email = '" . $_POST["email"] . "', password = md5('" . $_POST["password"] . "')
 			WHERE id ='" . $_POST["adminid"] . "'";
             echo $updateQuery;
@@ -129,7 +129,7 @@ class Clinic extends Dbconfig
     {
         if ($_POST["adminid"]) {
             $sqlUpdate = "
-				DELETE FROM " . $this->adminTable . "
+				DELETE FROM " . $this->table . "
 				WHERE id = '" . $_POST["adminid"] . "'";
             mysqli_query($this->dbConnect, $sqlUpdate);
         }
@@ -138,7 +138,7 @@ class Clinic extends Dbconfig
     public function statusUpdate()
     {
         if ($_POST['adminid']) {
-            $updateQuery = "UPDATE " . $this->adminTable . " 
+            $updateQuery = "UPDATE " . $this->table . " 
 			SET is_active= IF(is_active=1, 0, 1) WHERE id = '".$_POST["adminid"]."'";
             echo $updateQuery;
             $isUpdated = mysqli_query($this->dbConnect, $updateQuery);
