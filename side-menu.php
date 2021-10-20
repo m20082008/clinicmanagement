@@ -20,7 +20,7 @@
                     </a>
                 </li>
                 <li class="" id="adminPage">
-                    <a href="admins.php" class="menu-link">
+                    <a href="clinics.php" class="menu-link">
                         <i class="ti-dashboard"></i>
                         <p>مدیریت درمانگاه</p>
                     </a>

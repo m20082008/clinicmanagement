@@ -1,6 +1,5 @@
 <?php
-session_start();
-require('config.php');
+require_once('config.php');
 
 class Clinic extends Dbconfig
 {
