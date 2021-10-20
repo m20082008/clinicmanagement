@@ -1,7 +1,8 @@
 <?php
 include('classes/admin.php');
+include('classes/clinic.php');
 $admin = new Admin();
-
+$clinic = new Clinic();
 if(!empty($_POST['action']) && $_POST['action'] == 'listadmin') {
 	$admin->listAdmins();
 }
@@ -20,6 +21,8 @@ if(!empty($_POST['action']) && $_POST['action'] == 'deleteAdmin') {
 if(!empty($_POST['action']) && $_POST['action'] == 'statusUpdate') {
     $admin->statusUpdate();
 }
-
+if(!empty($_POST['action']) && $_POST['action'] == 'listclinic') {
+    $clinic->listClinics();
+}
 
 ?>

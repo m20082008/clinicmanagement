@@ -83,7 +83,6 @@ class Admin extends Dbconfig
             }else{
                 $adminRows[] = '<button type="button" name="activestatus" id="' . $admin["id"] . '" class="btn btn-success btn-xs activestatus" >فعال کن</button>';
             }
-            $adminRows[] = '<button type="button" name="activestatus" id="' . $admin["id"] . '" class="btn btn-danger btn-xs activestatus" >غیر فعال کن</button>';
             $adminData[] = $adminRows;
         }
         $output = array(

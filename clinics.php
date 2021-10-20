@@ -34,12 +34,16 @@ include('inc/header.php');
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>نام کاربری</th>
-                            <th>ایمیل</th>
+                            <th>نام کلینیک</th>
+                            <th>آدرس</th>
                             <th>وضعیت</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <th>تلفن</th>
+                            <th>شبانه روزی</th>
+                            <th>ساخته شده در </th>
+                            <th>بروزرسانی در </th>
+                            <th> </th>
+                            <th> </th>
+                            <th> </th>
                         </tr>
                         </thead>
                     </table>
@@ -54,20 +58,24 @@ include('inc/header.php');
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title"><i class="fa fa-plus"></i> ویرایش ادمین</h4>
+                        <h4 class="modal-title"><i class="fa fa-plus"></i> ویرایش کلینیک</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="userName" class="control-label">نام کاربری*</label>
+                            <label for="userName" class="control-label">نام کلینیک*</label>
                             <input type="text" class="form-control" id="username" name="username" placeholder="نام کاربری" required>
                         </div>
                         <div class="form-group">
-                            <label for="password" class="control-label">رمز عبور*</label>
-                            <input type="text" class="form-control" id="password" name="password" placeholder="رمز عبور" required>
+                            <label for="password" class="control-label">آدرس*</label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="آدرس" required>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="control-label">ایمیل</label>
-                            <input type="email" class="form-control"  id="email" name="email" placeholder="ایمیل">
+                            <label for="phone" class="control-label">تلفن</label>
+                            <input type="text" class="form-control"  id="phone" name="phone" placeholder="تلفن">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="control-label">شبانه روزی</label>
+                            <input type="radio" class="form-control"  id="fulltime" name="fulltime" placeholder="تلفن">
                         </div>
                     </div>
                     <div class="modal-footer">
